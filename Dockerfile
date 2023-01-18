@@ -26,8 +26,8 @@ VOLUME /unifiproxy
 
 # Copy Start Script and run
 RUN echo "**** copying files ****"
-COPY ./server.js /unifiproxy/
-COPY ./client.js /unifiproxy/
-COPY ./example-packet.json /unifiproxy/
+COPY server.js /unifiproxy/
+COPY client.js /unifiproxy/
+COPY example-packet.json /unifiproxy/
 
 CMD ["sh","/server.js packet.json"]
