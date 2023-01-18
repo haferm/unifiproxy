@@ -19,14 +19,12 @@ RUN apt-get clean
 # Verzeichnis anlegen
 RUN mkdir -p /unifiproxy
 
-
-EXPOSE 10001/udp
-VOLUME /unifiproxy
-
-
 # Copy local files
 RUN echo "**** copying files ****"
 COPY /files/ /unifiproxy/
+
+EXPOSE 10001/udp
+VOLUME /unifiproxy
 
 
 CMD ["sh","/unifiproxy/server.js packet.json"]
