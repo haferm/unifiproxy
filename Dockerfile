@@ -28,6 +28,6 @@ VOLUME /unifiproxy
 RUN echo "**** copying files ****"
 COPY ./server.js /unifiproxy/
 COPY ./client.js /unifiproxy/
-COPY ./packet-example.json /unifiproxy/
+COPY ./example-packet.json /unifiproxy/
 
 CMD ["sh","/server.js packet.json"]
