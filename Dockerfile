@@ -24,10 +24,9 @@ EXPOSE 10001/udp
 VOLUME /unifiproxy
 
 
-# Copy Start Script and run
+# Copy local files
 RUN echo "**** copying files ****"
-ADD files/server.js /unifiproxy/
-ADD files/client.js /unifiproxy/
-ADD files/example-packet.json /unifiproxy/
+COPY /files/ /unifiproxy/
+
 
 CMD ["sh","/unifiproxy/server.js packet.json"]
