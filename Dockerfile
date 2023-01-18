@@ -30,4 +30,4 @@ ADD files/server.js /unifiproxy/
 ADD files/client.js /unifiproxy/
 ADD files/example-packet.json /unifiproxy/
 
-CMD ["sh","/server.js packet.json"]
+CMD ["sh","/unifiproxy/server.js packet.json"]
